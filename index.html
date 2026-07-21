@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="google-site-verification" content="cwSCd9UivBO7Xu_g62Ax5n_yDZyDH1rfKl6Bc0CiFu8" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium Curtains & Blinds | Keerti Enterprises</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Smooth Scroll Effect */
+html {
+    scroll-behavior: smooth;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+body{
+    background:#ffffff;
+    color:#333;
+    overflow-x: hidden;
+}
+
+header{
+    background: rgba(15, 35, 60, 0.95); 
+    backdrop-filter: blur(10px);
+    color:white;
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+.logo{
+    font-size:24px;
+    font-weight:700;
+    letter-spacing: 1.5px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+nav a:hover {
+    color: #d4af37;
+    transform: translateY(-2px);
+}
+
+/* HAMBURGER STYLES */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+    z-index: 1001;
+}
+
+.hamburger span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.hero{
+    height:85vh;
+    background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url('https://i.pinimg.com/736x/5e/ab/12/5eab12c9a2bb7dcc2dcf674e08568fc4.jpg'); 
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-content h1{
+    font-size:54px;
+    margin-bottom:15px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.hero-content p{
+    font-size:22px;
+    margin-bottom:30px;
+    font-weight: 300;
+    color: #f0f0f0;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 30px;
+    background:#d4af37;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+    margin:5px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn:hover {
+    background: #bfa032;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+}
+
+.btn:active {
+    transform: translateY(1px) scale(0.98);
+}
+
+/* BRAND TRUST STATS BAR */
+.stats-bar {
+    background: #0f233c;
+    color: white;
+    padding: 30px 8%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: center;
+    border-bottom: 3px solid #d4af37;
+}
+
+.stat-item h3 {
+    font-size: 32px;
+    color: #d4af37;
+    font-weight: 700;
+}
+
+.stat-item p {
+    font-size: 14px;
+    color: #d1d5db;
+    font-weight: 300;
+}
+
+section{
+    padding:80px 8%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+    font-size:38px;
+    color:#0f233c; 
+    font-weight: 700;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: #d4af37;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border: 1px solid #f0f0f0;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow: 0 15px 35px rgba(15, 35, 60, 0.12);
+}
+
+.card img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+    cursor: zoom-in;
+}
+
+.card h3{
+    padding:20px;
+    font-size: 18px;
+    color: #0f233c;
+    font-weight: 600;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:25px;
+    text-align:center;
+}
+
+.feature-box{
+    background:#ffffff;
+    padding:35px 25px;
+    border-radius:12px;
+    border: 1px solid #eaeaea;
+    font-weight: 600;
+    color: #0f233c;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    transition: all 0.3s ease;
+}
+
+.feature-box:hover {
+    background: #0f233c;
+    color: white;
+    transform: translateY(-5px);
+    border-color: #0f233c;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.gallery img{ 
+    height:260px;
+    width: 100%;
+    border-radius:12px;
+    object-fit: cover;
+    cursor: zoom-in;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.gallery img:hover {
+    transform: scale(1.04);
+}
+
+/* AUTO SCROLLING REVIEWS TICKER */
+.reviews-ticker-wrapper {
+    width: 100%;
+    overflow: hidden;
+    background: #f8f9fa;
+    padding: 25px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.review-card-inline {
+    display: inline-block;
+    background: white;
+    padding: 20px 30px;
+    margin: 0 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    border: 1px solid #eee;
+}
+
+.review-card-inline p {
+    font-style: italic;
+    font-size: 14px;
+    color: #555;
+    display: inline;
+}
+
+.review-card-inline strong {
+    color: #0f233c;
+    margin-left: 15px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* INTERACTIVE FAQ ACCORDION SECTION */
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid #eaeaea;
+    padding: 18px 0;
+}
+
+.faq-question {
+    font-size: 17px;
+    font-weight: 600;
+    color: #0f233c;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.faq-answer p {
+    padding-top: 12px;
+}
+
+.faq-icon {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+    color: #d4af37;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+
+/* MODERN PLAYSTORE-STYLE STAR RATING CONTAINER */
+.feedback-section {
+    background: #fcfcfc;
+    border-top: 1px solid #eaeaea;
+}
+
+.form-container {
+    max-width: 650px;
+    margin: 0 auto;
+    background: white;
+    padding: 45px;
+    border-radius: 14px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.04);
+    border: 1px solid #eee;
+    text-align: center;
+}
+
+.star-rating-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.star-rating-wrapper input {
+    display: none;
+}
+
+.star-rating-wrapper label {
+    font-size: 46px;
+    color: #ddd;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.star-rating-wrapper label:hover,
+.star-rating-wrapper label:hover ~ label,
+.star-rating-wrapper input:checked ~ label {
+    color: #d4af37;
+}
+
+.star-rating-wrapper label:active {
+    transform: scale(0.9);
+}
+
+.rating-status-text {
+    font-size: 16px;
+    font-weight: 500;
+    color: #0f233c;
+    margin-top: 15px;
+    min-height: 24px;
+}
+
+/* Added Contact Grid layout */
+.contact {
+    background: linear-gradient(135deg, #0f233c, #1d3557); 
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    color: white;
+    border-radius: 12px;
+    padding: 60px 8%;
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-link {
+    color: #e5e5e5;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 15px 25px;
+    border-radius: 6px;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.contact-link:hover {
+    background: rgba(212, 175, 55, 0.08);
+    border-color: #d4af37;
+    color: #d4af37;
+    transform: translateX(5px);
+}
+
+/* Lead Form Styling inside Contact */
+.lead-form {
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.lead-form input, .lead-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+    font-family: inherit;
+}
+.lead-form input:focus, .lead-form textarea:focus {
+    border-color: #d4af37;
+}
+
+footer{
+    background: #0f233c; 
+    color:white;
+    text-align:center;
+    padding: 30px;
+    font-size: 14px;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+/* IMAGE LIGHTBOX POPUP SCREEN */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 25, 47, 0.95);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(255,255,255,0.1);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.lightbox.active img {
+    transform: scale(1);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media(max-width:768px){
+    .hero-content h1{ font-size:36px; }
+    .form-container { padding: 25px; }
+    .stats-bar { padding: 20px; }
+    .stat-item { flex: 1 1 40%; }
+    
+    .contact-layout { grid-template-columns: 1fr; } /* Stack on mobile */
+
+    /* RESPONSIVE HAMBURGER & NAV CONFIGURATION */
+    .hamburger { display: flex; }
+    nav {
+        display: none; flex-direction: column; position: absolute;
+        top: 100%; left: 0; width: 100%;
+        background: rgba(15, 35, 60, 0.98); padding: 20px 0;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1); border-top: 1px solid rgba(255,255,255,0.05);
+    }
+    nav.active { display: flex; }
+    nav a { margin: 12px 0; width: 100%; text-align: center; font-size: 16px; padding: 5px 0; }
+    .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(6px, -7px); }
+}
+
+/* --- AI CHATBOT STYLES --- */
+.chatbot-launcher {
+    position: fixed; bottom: 30px; right: 30px; width: 60px; height: 60px;
+    background: #0f233c; border: 2px solid #d4af37; color: white; border-radius: 50%;
+    display: flex; justify-content: center; align-items: center; font-size: 28px;
+    cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.2); z-index: 2000;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+.chatbot-launcher:hover { transform: scale(1.1); background: #1d3557; }
+.chatbot-container {
+    position: fixed; bottom: 100px; right: 30px; width: 350px; height: 450px;
+    background: white; border-radius: 12px; box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+    display: none; flex-direction: column; overflow: hidden; z-index: 2000; border: 1px solid #e5e5e5;
+}
+.chatbot-header {
+    background: linear-gradient(135deg, #0f233c, #1d3557); color: white; padding: 15px;
+    font-weight: bold; display: flex; justify-content: space-between; align-items: center;
+}
+.chatbot-close { cursor: pointer; font-size: 20px; opacity: 0.8; }
+.chatbot-close:hover { opacity: 1; }
+.chatbot-messages { flex: 1; padding: 15px; overflow-y: auto; background: #f9f9f9; display: flex; flex-direction: column; gap: 10px; }
+.chat-msg { padding: 10px 14px; border-radius: 8px; max-width: 80%; font-size: 14px; line-height: 1.4; }
+.chat-msg.bot { background: #eaeaea; color: #333; align-self: flex-start; }
+.chat-msg.user { background: #0f233c; color: white; align-self: flex-end; }
+.chatbot-input-area { display: flex; border-top: 1px solid #eee; padding: 10px; background: white; }
+.chatbot-input-area input { flex: 1; border: 1px solid #ddd; padding: 8px 12px; border-radius: 20px; outline: none; }
+.chatbot-input-area button { background: #d4af37; color: white; border: none; padding: 8px 15px; margin-left: 8px; border-radius: 20px; cursor: pointer; font-weight: bold; }
+.chatbot-input-area button:hover { background: #bfa032; }
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">KEERTI ENTERPRISES</div>
+    <div class="hamburger" id="hamburgerMenu" onclick="toggleMobileMenu()">
+        <span></span><span></span><span></span>
+    </div>
+    <nav id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#faq">FAQs</a>
+        <a href="#feedback">Rating & Reviews</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>Exterior & Home Decor Solutions</h1>
+        <p>Custom Designs • Perfect Fitting • Affordable Prices</p>
+        <a href="https://wa.me/917275612150?text=Hi,%20I%20want%20to%20know%20more%20about%20your%20curtains%20and%20blinds." target="_blank" class="btn" style="background:#25D366; color:#fff; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);">WhatsApp Us</a>
+        <a href="tel:+917275612150" class="btn">Call Us Now</a>
+    </div>
+</section>
+
+<div class="stats-bar">
+    <div class="stat-item">
+        <h3>500+</h3><p>Homes Transformed</p>
+    </div>
+    <div class="stat-item">
+        <h3>100%</h3><p>Custom Measurements</p>
+    </div>
+    <div class="stat-item">
+        <h3>Free</h3><p>Home Inspection Visit</p>
+    </div>
+    <div class="stat-item">
+        <h3>Expert</h3><p>Installation Crews</p>
+    </div>
+</div>
+
+<section id="products">
+    <h2 class="section-title">Our Categories</h2>
+    <div class="grid">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800">
+            <h3>Designer Curtains</h3>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800">
+            <h3>Roller Blinds</h3>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800">
+            <h3>Zebra Blinds</h3>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800">
+            <h3>Venetian Blinds</h3>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">Why Choose Us</h2>
+    <div class="features">
+        <div class="feature-box">✅ Custom Measurements</div>
+        <div class="feature-box">✅ Premium Quality</div>
+        <div class="feature-box">✅ Free Home Visit</div>
+        <div class="feature-box">✅ Expert Installation</div>
+        <div class="feature-box">✅ Best Prices</div>
+    </div>
+</section>
+
+<section>
+    <h2 class="section-title">Featured Products</h2>
+    <div class="grid">
+        <div class="card"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800"><h3>Luxury Curtains</h3></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800"><h3>Blackout Curtains</h3></div>
+        <div class="card"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800"><h3>Roller Blinds</h3></div>
+    </div>
+</section>
+
+<section id="gallery">
+    <h2 class="section-title">Gallery</h2>
+    <div class="grid gallery">
+        <img src="https://i.pinimg.com/736x/ce/b4/f4/ceb4f41c74adb4026239359c16a43777.jpg">
+        <img src="https://i.pinimg.com/736x/e4/5c/bf/e45cbff31a9639008bec84c6d62e9d3d.jpg">
+        <img src="https://i.pinimg.com/736x/e2/34/1c/e2341cba7904f6bbe56d22af6b1d72c1.jpg">
+        <img src="https://i.pinimg.com/736x/74/e4/95/74e495c71a8bf7ada685ec3a37abdb38.jpg">
+        <img src="https://i.pinimg.com/736x/ea/04/a2/ea04a2267af6ca8232fbe2b845fc0d20.jpg">
+    </div>
+</section>
+
+<section id="testimonials" style="padding: 40px 0;">
+    <h2 class="section-title">What Our Customers Say</h2>
+    <div class="reviews-ticker-wrapper">
+        <marquee behavior="scroll" direction="left" scrollamount="6" onmouseover="this.stop();" onmouseout="this.start();" id="reviewsMarquee">
+            <div class="review-card-inline">
+                <p>"Keerti Enterprises changed the entire look of my living room! Flawless fitting."</p>
+                <strong>- Ramesh Basti</strong>
+            </div>
+            <div class="review-card-inline">
+                <p>"Highly recommend their Zebra blinds. Excellent built quality and smooth setup."</p>
+                <strong>- Premium Customer</strong>
+            </div>
+            <div class="review-card-inline">
+                <p>"Great experience. The measurements are exact and the material looks highly premium."</p>
+                <strong>- Verma Ji</strong>
+            </div>
+        </marquee>
+    </div>
+</section>
+
+<section id="faq" style="background: #fafafa;">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="faq-container">
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">Do you provide free home measurement visits? <span class="faq-icon">+</span></div>
+            <div class="faq-answer"><p>Yes, absolutely! We offer a 100% Free Home Visit across Basti for precise layouts, measurements, and catalog presentations.</p></div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">What types of blinds do you customize? <span class="faq-icon">+</span></div>
+            <div class="faq-answer"><p>We specialize in Roller Blinds, Zebra Blinds, Venetian Blinds, and Luxury Wooden Blinds with heavy durability controllers.</p></div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">How long does it take for installation? <span class="faq-icon">+</span></div>
+            <div class="faq-answer"><p>Once the design fabric is confirmed, standard custom order production and setup are completed within 3 to 5 business days.</p></div>
+        </div>
+    </div>
+</section>
+
+<section class="feedback-section" id="feedback">
+    <h2 class="section-title">Rate Our Service</h2>
+    <div class="form-container">
+        <p style="color: #666; font-size: 15px;">Tap the stars to rate your experience with Keerti Enterprises</p>
+        <div class="star-rating-wrapper">
+            <input type="radio" id="star5" name="rating" value="5" onclick="submitStarRating(5)"><label for="star5">★</label>
+            <input type="radio" id="star4" name="rating" value="4" onclick="submitStarRating(4)"><label for="star4">★</label>
+            <input type="radio" id="star3" name="rating" value="3" onclick="submitStarRating(3)"><label for="star3">★</label>
+            <input type="radio" id="star2" name="rating" value="2" onclick="submitStarRating(2)"><label for="star2">★</label>
+            <input type="radio" id="star1" name="rating" value="1" onclick="submitStarRating(1)"><label for="star1">★</label>
+        </div>
+        <div class="rating-status-text" id="ratingStatusText"></div>
+
+        <div style="margin-top: 30px; border-top: 1px solid #eee; padding-top: 25px; text-align: left;">
+            <h4 style="color: #0f233c; margin-bottom: 10px;">Leave a Public Review</h4>
+            <form onsubmit="handleLiveReviewSubmit(event)">
+                <input type="text" id="revAuthor" placeholder="Your Name (e.g. Amit Basti)" required style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 6px;">
+                <textarea id="revContent" placeholder="Write your experience..." required rows="3" style="width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 6px; resize: none;"></textarea>
+                <button type="submit" class="btn" style="width: 100%; text-align: center;">🚀 Broadcast Review Live</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h2 class="section-title" style="color: white;">Contact Us</h2>
+    <div class="contact-layout">
+        
+        <div class="contact-links">
+            <p style="color: #ccc; margin-bottom: 15px; font-size: 16px;">Ready to transform your home? Reach out for a free home measurement visit.</p>
+            <a class="contact-link" href="https://maps.app.goo.gl/poe3qzGWjSoQBX2S8?g_st=ac" target="_blank">
+                📍 Companybag chauraha, near Press-club, BASTI
+            </a>
+            <a class="contact-link" href="tel:+917275612150">
+                📞 +91 72756 12150
+            </a>
+            <a class="contact-link" href="mailto:keertienterprises151@gmail.com">
+                📧 keertienterprises151@gmail.com
+            </a>
+        </div>
+
+        <form class="lead-form" onsubmit="sendLeadToOwner(event)">
+            <h3 style="color: #0f233c; margin-bottom: 20px;">Request Free Visit</h3>
+            <input type="text" id="custName" placeholder="Your Full Name" required>
+            <input type="tel" id="custPhone" placeholder="Phone Number (+91...)" required>
+            <input type="email" id="custEmail" placeholder="Gmail Address" required>
+            <textarea id="custMsg" placeholder="Tell us about window sizes or requirements..." required rows="4"></textarea>
+            <button type="submit" class="btn" id="formSubBtn" style="width: 100%; text-align: center;">Submit & Connect</button>
+        </form>
+
+    </div>
+</section>
+
+<footer>
+    © 2026 KEERTI ENTERPRISES | All Rights Reserved
+</footer>
+
+<div class="lightbox" id="imageLightbox">
+    <span class="lightbox-close" onclick="closeLightbox()">×</span>
+    <img id="lightboxImg" src="" alt="Enlarged view">
+</div>
+
+<div class="chatbot-launcher" id="chatLauncher" onclick="toggleChat()">💬</div>
+<div class="chatbot-container" id="chatContainer">
+    <div class="chatbot-header">
+        <span>Keerti AI Assistant</span>
+        <span class="chatbot-close" onclick="toggleChat()">×</span>
+    </div>
+    <div class="chatbot-messages" id="chatMessages">
+        <div class="chat-msg bot">🙏 Namaste! Main Keerti Enterprises ka AI assistant hun. Kahiye, aaj main aapki kya madad kar sakta hun?</div>
+    </div>
+    <div class="chatbot-input-area">
+        <input type="text" id="chatInput" placeholder="Puchhein..." onkeypress="handleKeyPress(event)">
+        <button onclick="sendChatMessage()">Send</button>
+    </div>
+</div>
+
+<script>
+// HAMBURGER CONTROLLER ENGINE
+const hamburger = document.getElementById('hamburgerMenu');
+const navMenu = document.getElementById('navMenu');
+
+function toggleMobileMenu() {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+}
+
+document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+    });
+});
+
+// LIGHTBOX ENGINE
+const lightbox = document.getElementById('imageLightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+
+document.querySelectorAll('.card img, .gallery img').forEach(image => {
+    image.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImg.src = image.src;
+        setTimeout(() => { lightbox.classList.add('active'); }, 10);
+    });
+});
+
+function closeLightbox() {
+    lightbox.classList.remove('active');
+    setTimeout(() => { lightbox.style.display = 'none'; }, 200);
+}
+lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+
+// INTERACTIVE FAQS ENGINE
+function toggleFaq(element) {
+    const faqItem = element.parentElement;
+    const answer = faqItem.querySelector('.faq-answer');
+    const icon = element.querySelector('.faq-icon');
+    
+    if (faqItem.classList.contains('active')) {
+        faqItem.classList.remove('active');
+        answer.style.maxHeight = null;
+        icon.innerText = '+';
+    } else {
+        faqItem.classList.add('active');
+        answer.style.maxHeight = answer.scrollHeight + "px";
+        icon.innerText = '×';
+    }
+}
+
+// PLAYSTORE-STYLE STAR RATING SUBMIT LOGIC
+function submitStarRating(stars) {
+    const statusText = document.getElementById('ratingStatusText');
+    let dynamicMessage = "";
+    
+    if(stars === 5) { dynamicMessage = "Fantastic! Thank you so much for the 5-star rating! ⭐⭐⭐⭐⭐"; }
+    else if(stars === 4) { dynamicMessage = "Thank you! We're glad you liked our service. ⭐⭐⭐⭐"; }
+    else { dynamicMessage = `Thank you for your ${stars}-star feedback! We will keep improving. 👍`; }
+    
+    statusText.style.color = "#d4af37";
+    statusText.innerText = dynamicMessage;
+}
+
+// NEW: LIVE REVIEW SUBMISSION ENGINE (Sends Email & Updates Marquee)
+async function handleLiveReviewSubmit(e) {
+    e.preventDefault();
+    const author = document.getElementById('revAuthor').value.trim();
+    const content = document.getElementById('revContent').value.trim();
+    
+    // Inject visually into the marquee
+    const marquee = document.getElementById('reviewsMarquee');
+    const newReviewHtml = `
+        <div class="review-card-inline" style="border: 1px solid #d4af37; background: #fffdf5;">
+            <p>"${content}"</p>
+            <strong>- ${author} (New!)</strong>
+        </div>`;
+    marquee.innerHTML = newReviewHtml + marquee.innerHTML;
+
+    // Send to Email via FormSubmit
+    try {
+        fetch("https://formsubmit.co/ajax/keertienterprises151@gmail.com", {
+            method: "POST", headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ "Reviewer Name": author, "Review Written": content, "_subject": "⭐ NEW WEBSITE REVIEW!" })
+        });
+    } catch (err) {}
+
+    alert("✨ Gazab! Aapka review website par live ho chuka hai!");
+    e.target.reset();
+}
+
+// NEW: CONTACT FORM TO EMAIL AND WHATSAPP ENGINE
+async function sendLeadToOwner(e) {
+    e.preventDefault(); 
+    const btn = document.getElementById('formSubBtn'); 
+    const name = document.getElementById('custName').value; 
+    const phone = document.getElementById('custPhone').value; 
+    const email = document.getElementById('custEmail').value; 
+    const msg = document.getElementById('custMsg').value;
+    
+    btn.innerText = "Processing..."; 
+    btn.style.opacity = "0.7";
+    
+    try { 
+        // Send email via FormSubmit
+        await fetch("https://formsubmit.co/ajax/keertienterprises151@gmail.com", { 
+            method: "POST", headers: { 'Content-Type': 'application/json' }, 
+            body: JSON.stringify({ "कस्टमर का नाम": name, "फोन नंबर": phone, "ईमेल": email, "ज़रूरत": msg, "_subject": "🔥 नई लीड: Keerti Enterprises" }) 
+        }); 
+    } catch (err) {}
+    
+    btn.innerText = "Submit & Connect"; 
+    btn.style.opacity = "1";
+    alert("Aapka form submit ho gaya hai! WhatsApp connect ho raha hai...");
+    
+    // Redirect to WhatsApp
+    window.open(`https://wa.me/917275612150?text=Hi%20Keerti%20Enterprises,%20New%20Inquiry:%0A*Name:*%20${name}%0A*Phone:*%20${phone}%0A*Req:*%20${msg}`, '_blank'); 
+    e.target.reset();
+}
+
+// AI CHATBOT ENGINE (Upgraded with Bhojpuri & smarter responses)
+function toggleChat() {
+    const container = document.getElementById('chatContainer');
+    if(container.style.display === 'flex') { container.style.display = 'none'; } 
+    else { container.style.display = 'flex'; scrollToBottom(); }
+}
+
+function handleKeyPress(event) { if (event.key === 'Enter') { sendChatMessage(); } }
+
+function sendChatMessage() {
+    const input = document.getElementById('chatInput');
+    const messageText = input.value.trim();
+    if (!messageText) return;
+
+    appendMessage(messageText, 'user');
+    input.value = '';
+
+    setTimeout(() => {
+        let botResponse = "";
+        const text = messageText.toLowerCase().trim();
+        
+        // 1. GREETINGS & BHOJPURI
+        if (text.match(/^(bhojpuri|ka hal|kisan ba)/)) {
+            botResponse = "का हाल बा? हम एकदम मस्त बानी! रउआ बताईं घर खातिर का सेवा कइल जाव?";
+        }
+        else if (text.match(/^(kaise ho|how are you|kya haal|kaise hain|how r u|sab badhiya)/)) {
+            botResponse = "Main ekdam badhiya hun! Aap bataiye, aap kaise hain? Ghar par sab kaisa chal raha hai? 😊";
+        }
+        else if (text.match(/^(hello|hi|hey|namaste|pranam|salam|hola)/)) {
+            botResponse = "Namaste! Keerti Enterprises me aapka swagat hai. Batayein window ke liye kya dekh rahe hain?";
+        }
+        
+        // 2. EMOTIONAL / PROBLEM
+        else if (text.includes('problem') || text.includes('dikkat') || text.includes('help me') || text.includes('shikayat')) {
+            botResponse = "Tension mat lijiye! Main aapki poori baat sunne ke liye taiyar hun. Agar emergency hai toh direct call (+91 72756 12150) par bhi baatein kar sakte hain.";
+        }
+        
+        // 3. CORE BUSINESS
+        else if (text.includes('curtain') || text.includes('parda') || text.includes('parde') || text.includes('fabric')) {
+            botResponse = "Hum Luxury, Designer, aur Blackout Curtains banate hain. Aapko Basti me kahin bhi perfect fitting ke sath parda mil jayega.";
+        }
+        else if (text.includes('blind') || text.includes('zebra') || text.includes('roller') || text.includes('venetian') || text.includes('window')) {
+            botResponse = "Humare pass Roller Blinds, Zebra Blinds, aur Venetian Wooden Blinds ki premium range hai.";
+        }
+        else if (text.match(/(price|cost|quote|daam|rate|kitna|rupay|money)/)) {
+            botResponse = "Exact nap aur discount ke liye hum Free Home Visit inspection dete hain! Pura cost aapke window size par depend karta hai.";
+        }
+        else if (text.match(/(where|location|address|pata|dukan|shop|basti|kahan)/)) {
+            botResponse = "Humara showroom Companybag Chauraha, near Press-Club, Basti mein hai.";
+        }
+        
+        // 4. FALLBACK
+        else {
+            botResponse = "Aap mujhse location, price ya curtains/blinds ke baare mein puch sakte hain. Ya phir direct call karein: 72756 12150";
+        }
+
+        appendMessage(botResponse, 'bot');
+    }, 500);
+}
+
+function appendMessage(text, sender) {
+    const chatMessages = document.getElementById('chatMessages');
+    const messageDiv = document.createElement('div');
+    messageDiv.classList.add('chat-msg', sender);
+    messageDiv.innerText = text;
+    chatMessages.appendChild(messageDiv);
+    scrollToBottom();
+}
+
+function scrollToBottom() {
+    const chatMessages = document.getElementById('chatMessages');
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+</script>
+
+</body>
+</html>
